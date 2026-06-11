@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Stackly OTT</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+.page-hero {
+  position: relative;
+  height: 45vh;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1920&q=80') center/cover;
+}
+.page-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(15,15,15,0.8) 0%, rgba(15,15,15,0.9) 100%);
+}
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 4%;
+}
+.page-hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.page-hero-content h1 span {
+  color: var(--primary);
+}
+.page-hero-content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.faq-section {
+  padding: 0 4%;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+.faq-item {
+  background: var(--bg-card);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.faq-item:hover {
+  border-color: var(--primary);
+}
+.faq-question {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+.faq-question i {
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  padding: 0 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.faq-item.active .faq-answer {
+  padding: 0 25px 20px;
+  max-height: 200px;
+}
+
+.map-section {
+  padding: 0 4%;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+.map-container {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .page-hero-content h1 {
+    font-size: 32px;
+  }
+  .map-container iframe {
+    height: 250px;
+  }
+}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <a href="index.html" class="logo">
+    <img src="logoo.webp" alt="Stackly Logo" class="logo-img">
+    <span class="logo-text">Stackly </span>
+</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="movies.html">Movies</a></li>
+    <li><a href="trending.html">Trending</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="header-actions">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search movies...">
+    </div>
+    <a href="404.html" class="btn btn-outline">Sign In</a>
+    <a href="404.html" class="btn btn-primary">Subscribe</a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<div class="mobile-menu-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="movies.html">Movies</a></li>
+    <li><a href="trending.html">Trending</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div style="margin-top:30px; display:flex; flex-direction:column; gap:15px;">
+    <a href="404.html" class="btn btn-outline" style="justify-content:center;">Sign In</a>
+    <a href="404.html" class="btn btn-primary" style="justify-content:center;">Subscribe</a>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content animate-fadeInUp">
+    <h1>Contact <span>Us</span></h1>
+    <p>We would love to hear from you. Get in touch with our team.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section">
+  <div class="contact-grid reveal">
+    <div class="contact-info">
+      <h2 style="font-size:28px; font-weight:700; margin-bottom:30px;">Get In <span style="color:var(--primary);">Touch</span></h2>
+      <p style="font-size:15px; color:var(--text-secondary); line-height:1.7; margin-bottom:30px;">Have questions about our service? Need help with your account? Our support team is here to assist you 24/7.</p>
+
+      <div class="contact-info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h4>Our Office</h4>
+          <p>123 Entertainment Street, Tech City, TC 10001</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <i class="fas fa-phone-alt"></i>
+        <div>
+          <h4>Phone Number</h4>
+          <p>+1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h4>Email Address</h4>
+          <p>support@stacklyott.com</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <i class="fas fa-clock"></i>
+        <div>
+          <h4>Working Hours</h4>
+          <p>24/7 Customer Support</p>
+        </div>
+      </div>
+
+      <div class="footer-social" style="margin-top:20px;">
+        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fab fa-twitter"></i></a>
+        <a href="404.html"><i class="fab fa-instagram"></i></a>
+        <a href="404.html"><i class="fab fa-youtube"></i></a>
+        <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3 style="font-size:22px; font-weight:700; margin-bottom:25px;">Send a <span style="color:var(--primary);">Message</span></h3>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <select required>
+            <option value="">Select a subject</option>
+            <option value="general">General Inquiry</option>
+            <option value="billing">Billing & Payments</option>
+            <option value="technical">Technical Support</option>
+            <option value="content">Content Request</option>
+            <option value="partnership">Partnership</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<div class="map-section reveal">
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2!2d-73.98!3d40.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzAwLjAiTiA3M8KwNTgnNDguMCJX!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="section section-dark">
+  <div class="section-header reveal">
+    <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+  </div>
+  <div class="faq-section reveal">
+    <div class="faq-item">
+      <div class="faq-question">
+        How do I subscribe to Stackly OTT?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+        <div class="faq-answer">
+        Simply click the Subscribe button, choose your preferred plan, enter your payment details, and start streaming instantly. We accept all major credit cards and digital wallets.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        Can I cancel my subscription anytime?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Yes! You can cancel your subscription at any time with no cancellation fees. Your access will continue until the end of your current billing period.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        How many devices can I use simultaneously?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        It depends on your plan. Basic allows 1 screen, Standard allows 2 screens, and Premium allows up to 4 screens simultaneously.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        Is there a free trial available?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Yes! We offer a 7-day free trial for all new subscribers. You can explore our full library without any commitment.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        Can I download content for offline viewing?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        Yes, Standard and Premium plans support downloads. You can download up to 100 titles on mobile devices and watch them offline for up to 30 days.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        What video quality is available?
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        We offer SD, Full HD, and 4K Ultra HD with HDR support. The quality depends on your subscription plan and internet connection speed.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+       <a href="index.html" class="logo">
+    <img src="logoo.webp" alt="Stackly Logo" class="logo-img">
+    <span class="logo-text">Stackly </span>
+</a>
+      <p>Your ultimate destination for unlimited movies, TV shows, and exclusive originals. Stream anywhere, anytime.</p>
+      <div class="footer-social">
+        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fab fa-twitter"></i></a>
+        <a href="404.html"><i class="fab fa-instagram"></i></a>
+        <a href="404.html"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="service.html">Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="404.html">Help Center</a></li>
+        <li><a href="404.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="404.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="404.html">About Us</a></li>
+        <li><a href="404.html">Careers</a></li>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Stackly OTT. All rights reserved.</p>
+    <p>Designed with <i class="fas fa-heart" style="color:var(--primary);"></i> by Stackly</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 50) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  mobileOverlay.classList.toggle('active');
+});
+mobileOverlay.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('active');
+  mobileOverlay.classList.remove('active');
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const revealOnScroll = () => {
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    faqItems.forEach(i => i.classList.remove('active'));
+    if (!isActive) item.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>

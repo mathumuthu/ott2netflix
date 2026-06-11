@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Page Not Found | Stackly OTT</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.error-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1920&q=80') center/cover;
+  opacity: 0.1;
+}
+.error-content {
+  position: relative;
+  z-index: 2;
+}
+.error-code {
+  font-size: 150px;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  text-shadow: 0 0 60px rgba(229,9,20,0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+.error-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+}
+.error-content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+.error-content .btn {
+  padding: 14px 40px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 100px;
+  }
+  .error-content h2 {
+    font-size: 24px;
+  }
+}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-content">
+    <div class="error-code">404</div>
+    <h2>Oops! Page Not Found</h2>
+    <p>The page you are looking for might have been removed, had its name changed,<br>or is temporarily unavailable.</p>
+    <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i> Back to Home</a>
+  </div>
+</div>
+
+</body>
+</html>
