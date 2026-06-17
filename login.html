@@ -1,177 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix</title>
-    <link rel="icon" href="./Assets/icon.webp" />
-    <link rel="stylesheet" href="./login.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi User Login</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-  </head>
-  <body>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(-45deg,#000000,#1a0000,#330000,#0d0d0d);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+overflow:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.back{
+position:absolute;
+top:30px;
+left:40px;
+color:#ff4d4d;
+text-decoration:none;
+font-weight:500;
+}
+
+.container{
+width:400px;
+padding:40px;
+border-radius:18px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(20px);
+text-align:center;
+border:1px solid rgba(255,0,0,0.2);
+box-shadow:0 0 30px rgba(255,0,0,0.2);
+}
+
+.logo{
+width:65px;
+height:65px;
+margin:auto;
+margin-bottom:15px;
+background:linear-gradient(135deg,#ff0000,#990000);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:26px;
+box-shadow:0 0 20px rgba(255,0,0,0.5);
+}
+
+h2{color:#fff;}
+.subtitle{color:#bbb;margin-bottom:20px;}
+
+.input-group{
+text-align:left;
+margin-bottom:15px;
+}
+
+label{
+color:#ffcccc;
+font-size:13px;
+display:block;
+margin-bottom:5px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:none;
+background:#111;
+color:white;
+outline:none;
+border:1px solid rgba(255,0,0,0.2);
+}
+
+/* password eye */
+.password-box{
+position:relative;
+}
+
+.eye{
+position:absolute;
+right:12px;
+top:12px;
+cursor:pointer;
+color:#ff4d4d;
+}
+
+/* remember */
+.row{
+display:flex;
+justify-content:space-between;
+font-size:13px;
+color:#ccc;
+margin-top:10px;
+}
+
+.row a{
+color:#ff4d4d;
+text-decoration:none;
+}
+
+/* button */
+button{
+margin-top:20px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:linear-gradient(90deg,#ff0000,#660000);
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+box-shadow:0 0 15px rgba(255,0,0,0.6);
+transform:scale(1.03);
+}
+
+/* signup */
+.signup{
+margin-top:15px;
+color:#ccc;
+}
+
+.signup a{
+color:#ff4d4d;
+text-decoration:underline;
+}
+
+@media(max-width:450px){
+.container{
+width:90%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back">← Back to Home</a>
+
+<div class="container">
 
 
-    <div class="overlay" id="overlay"></div>
 
-    <section class="Structure">
-      <div class="login-wrapper">
-        <div class="login-card">
-          <!-- LEFT SIDE -->
-          <div class="login-left">
-            <h1>Create your account on <span>Stackly Video Hub</span></h1>
+<h2>Welcome Back</h2>
+<p class="subtitle">Login to access your account</p>
 
-            <ul>
-              <li>✔ Watch unlimited movies and shows</li>
-              <li>✔ Discover trending and recommended content</li>
-              <li>✔ Upload and grow your own channel</li>
-              <li>✔ Track performance with analytics</li>
-              <li>✔ Stream anytime, anywhere</li>
-            </ul>
+<form onsubmit="loginUser(event)">
 
-            <div class="tip">
-              Tip: Press
-              <a href="404.html" class="tabb"><strong>Tab</strong></a>
-              to move fields
-            </div>
-          </div>
+<div class="input-group">
+<label>Login As</label>
+<select id="role">
+<option value="Administrator">Administrator</option>
+<option value="Researcher" selected>User</option>
+<!-- <option value="Patient">Patient</option> -->
+</select>
+</div>
 
-          <!-- RIGHT SIDE -->
-          <div class="login-right">
-            <h2>Login</h2>
-            <p>Access your Dashboard and Manage with Care.</p>
+<div class="input-group">
+<label>Email ID</label>
+<input type="email" id="email" placeholder="Enter your email">
+</div>
 
-            <form id="loginForm">
-              <!-- ROLE -->
-              <div class="input-group">
-                <select id="role" required>
-                  <option value="">Login As</option>
-                  <option value="viewer">Viewer</option>
-                  <option value="admin">Admin</option>
-                </select>
-              </div>
+<div class="input-group">
+<label>Password</label>
 
-              <!-- EMAIL -->
-              <div class="input-group">
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="you@gmail.com"
-                  required
-                />
-              </div>
+<div class="password-box">
+<input type="password" id="password" placeholder="Enter Password">
+<span class="eye" onclick="togglePassword()">👁</span>
+</div>
 
-              <!-- PASSWORD -->
-              <div class="input-group password-group">
-                <input
-                  type="password"
-                  id="password"
-                  placeholder="Password"
-                  required
-                />
-                <span id="togglePassword">Show</span>
-              </div>
+</div>
 
-              <a href="for.html" class="forgot"
-                >Forgot password?</a
-              >
+<div class="row">
+<label>
+<input type="checkbox"> Remember me
+</label>
+<a href="for.html">Forgot password?</a>
+</div>
 
-              <!-- <button type="submit" class="login-btn1">
-                Login to Dashboard
-              </button> -->
-              <button type="submit" class="login-btn1">Login</button>
+<button type="submit">Login to Dashboard</button>
 
-              <div class="signup">
-                <p>New here? <a href="sig.html">Create an account</a></p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+</form>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const togglePassword = document.getElementById("togglePassword");
-        const password = document.getElementById("password");
-        const form = document.getElementById("loginForm");
+<div class="signup">
+Don't have an account?
+<a href="sig.html">Sign up</a>
+</div>
 
-        togglePassword.addEventListener("click", () => {
-          const type = password.type === "password" ? "text" : "password";
-          password.type = type;
-          togglePassword.textContent = type === "password" ? "Show" : "Hide";
-        });
+</div>
 
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const role = document.getElementById("role").value;
-          const email = document.getElementById("email").value.trim();
-          const pass = password.value.trim();
-
-          const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-
-          // ✅ Password rule
-          const passwordPattern =
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
-
-          if (!role) {
-            alert("Please select login role");
-            return;
-          }
-
-          if (!gmailPattern.test(email)) {
-            alert("Email must end with @gmail.com");
-            return;
-          }
-
-          if (!passwordPattern.test(pass)) {
-            alert(
-              "Password must be at least 6 characters and include uppercase, lowercase, number, and symbol",
-            );
-            return;
-          }
-
-          try {
-            sessionStorage.setItem("loggedInUser", email);
-            sessionStorage.setItem("role", role);
-
-            if (role === "viewer") {
-              window.location.href = "Das.html"; // Netflix home
-            } else if (role === "admin") {
-              window.location.href = "Dash1.html"; // Upload / analytics
-            }
-          } catch (error) {
-            alert("Storage issue. Try using Live Server.");
-          }
-        });
-      });
-    </script>
-
-    
-  </body>
-</html>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./script.js"></script>
 <script>
-  AOS.init({
-    once: true,
-    duration: 1000,
-    easing: "ease-out-cubic",
-    startEvent: "aos:ready", // manual trigger
-  });
+
+function togglePassword(){
+let pass=document.getElementById("password");
+pass.type = pass.type === "password" ? "text" : "password";
+}
+
+function loginUser(event){
+
+event.preventDefault();
+
+let email=document.getElementById("email").value.trim();
+let password=document.getElementById("password").value.trim();
+let role=document.getElementById("role").value;
+
+let emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if(email==="" || password===""){
+alert("Please fill all fields");
+return;
+}
+
+if(!email.match(emailPattern)){
+alert("Enter valid email");
+return;
+}
+
+if(role==="Administrator"){
+window.location.href="Das.html";
+}
+else if(role==="Researcher"){
+window.location.href="Dash1.html";   // 👈 CHANGE HERE
+}
+else{
+window.location.href="Dash3.html";
+}
+
+}
+
 </script>
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</body>
+</html>

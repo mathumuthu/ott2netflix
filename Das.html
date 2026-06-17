@@ -113,7 +113,7 @@
             background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
         }
     </style>
-<base target="_blank">
+<!-- <base target="_blank"> -->
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
     <!-- Mobile Header -->
@@ -140,10 +140,10 @@
                 <i class="fas fa-home text-stackly-red-light"></i>
                 <span class="font-medium">Dashboard</span>
             </button>
-            <button onclick="switchTab('subscriptions')" class="mobile-nav-item w-full flex items-center gap-4 px-4 py-4 rounded-xl text-left transition-all hover:bg-stackly-gray">
+            <!-- <button onclick="switchTab('subscriptions')" class="mobile-nav-item w-full flex items-center gap-4 px-4 py-4 rounded-xl text-left transition-all hover:bg-stackly-gray">
                 <i class="fas fa-credit-card text-stackly-red-light"></i>
                 <span class="font-medium">Subscriptions</span>
-            </button>
+            </button> -->
             <button onclick="switchTab('analytics')" class="mobile-nav-item w-full flex items-center gap-4 px-4 py-4 rounded-xl text-left transition-all hover:bg-stackly-gray">
                 <i class="fas fa-chart-line text-stackly-red-light"></i>
                 <span class="font-medium">Analytics</span>
@@ -160,12 +160,12 @@
         </nav>
         <div class="absolute bottom-8 left-6 right-6">
             <div class="glass-panel rounded-2xl p-4">
-                <div class="flex items-center gap-3">
+                 <div class="flex items-center gap-3">
                     <img src="img2.webp" alt="User" class="w-12 h-12 rounded-full border-2 border-stackly-red">
-                    <div>
+                    <!-- <div>
                         <p class="font-semibold">Alex Morgan</p>
                         <p class="text-sm text-gray-400">Premium Member</p>
-                    </div>
+                    </div>  -->
                 </div>
             </div>
         </div>
@@ -200,16 +200,16 @@
                     </div>
                 </button>
 
-                <button onclick="switchTab('subscriptions')" id="nav-subscriptions" class="nav-item w-full flex items-center gap-4 px-4 py-3.5 rounded-xl text-left transition-all duration-300 hover:bg-stackly-gray group">
+                <!-- <button onclick="switchTab('subscriptions')" id="nav-subscriptions" class="nav-item w-full flex items-center gap-4 px-4 py-3.5 rounded-xl text-left transition-all duration-300 hover:bg-stackly-gray group">
                     <div class="w-10 h-10 rounded-lg bg-stackly-gray flex items-center justify-center group-hover:bg-stackly-red/20 transition-colors">
                         <i class="fas fa-credit-card text-lg text-gray-400 group-hover:text-stackly-red-light"></i>
-                    </div>
-                    <div class="flex-1">
+                    </div> -->
+                    <!-- <div class="flex-1">
                         <span class="font-semibold block text-gray-300 group-hover:text-white">Subscriptions</span>
                         <span class="text-xs text-gray-500">Manage Plans</span>
                     </div>
                     <span class="bg-stackly-red text-white text-xs font-bold px-2 py-1 rounded-full">3</span>
-                </button>
+                </button> -->
 
                 <button onclick="switchTab('analytics')" id="nav-analytics" class="nav-item w-full flex items-center gap-4 px-4 py-3.5 rounded-xl text-left transition-all duration-300 hover:bg-stackly-gray group">
                     <div class="w-10 h-10 rounded-lg bg-stackly-gray flex items-center justify-center group-hover:bg-stackly-red/20 transition-colors">
@@ -249,15 +249,15 @@
             <!-- User Profile -->
             <div class="p-4 border-t border-stackly-gray">
                 <div class="glass-panel rounded-2xl p-4 flex items-center gap-3 cursor-pointer hover:border-stackly-red/30 transition-colors">
-                    <div class="relative">
+                    <!-- <div class="relative">
                         <img src="img14.webp" alt="User" class="w-12 h-12 rounded-full border-2 border-stackly-red object-cover">
                         <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-stackly-dark"></div>
-                    </div>
-                    <div class="flex-1 min-w-0">
+                    </div> -->
+                    <!-- <div class="flex-1 min-w-0">
                         <p class="font-semibold truncate">Alex Morgan</p>
                         <p class="text-xs text-stackly-red-light">Premium Member</p>
-                    </div>
-                    <i class="fas fa-chevron-right text-gray-500 text-sm"></i>
+                    </div> -->
+                    <!-- <i class="fas fa-chevron-right text-gray-500 text-sm"></i> -->
                 </div>
             </div>
         </aside>
@@ -271,14 +271,14 @@
                     <p class="text-sm text-gray-400">Welcome back, here's what's happening</p>
                 </div>
                 <div class="flex items-center gap-4">
-                    <button class="relative w-10 h-10 rounded-full bg-stackly-gray flex items-center justify-center hover:bg-stackly-red/20 transition-colors">
+                <a href="404.html"><button class="relative w-10 h-10 rounded-full bg-stackly-gray flex items-center justify-center hover:bg-stackly-red/20 transition-colors">
                         <i class="fas fa-bell text-gray-400"></i>
                         <span class="notification-badge absolute top-1 right-1 w-2.5 h-2.5 bg-stackly-red rounded-full"></span>
-                    </button>
-                    <button class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-stackly-red hover:bg-stackly-red-dark transition-colors font-medium text-sm">
+                    </button></a>
+                    <a href="404.html"><button class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-stackly-red hover:bg-stackly-red-dark transition-colors font-medium text-sm">
                         <i class="fas fa-plus"></i>
                         <span>Add Subscription</span>
-                    </button>
+                    </button></a>
                 </div>
             </div>
 
@@ -391,25 +391,25 @@
                         <div class="space-y-4">
                             <div class="glass-panel rounded-2xl p-6">
                                 <h3 class="text-lg font-bold mb-4">Quick Actions</h3>
-                                <div class="space-y-3">
+                         <a href="404.html">     <div class="space-y-3">
                                     <button class="w-full flex items-center gap-3 p-3 rounded-xl bg-stackly-gray hover:bg-stackly-red/20 transition-colors group">
                                         <div class="w-10 h-10 rounded-lg bg-stackly-red/20 flex items-center justify-center group-hover:bg-stackly-red transition-colors">
                                             <i class="fas fa-plus text-stackly-red-light group-hover:text-white"></i>
                                         </div>
                                         <span class="font-medium">Add New Sub</span>
-                                    </button>
-                                    <button class="w-full flex items-center gap-3 p-3 rounded-xl bg-stackly-gray hover:bg-blue-500/20 transition-colors group">
+                                    </button></a>
+                                <a href="404.html">    <button class="w-full flex items-center gap-3 p-3 rounded-xl bg-stackly-gray hover:bg-blue-500/20 transition-colors group">
                                         <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500 transition-colors">
                                             <i class="fas fa-file-export text-blue-400 group-hover:text-white"></i>
                                         </div>
                                         <span class="font-medium">Export Report</span>
-                                    </button>
-                                    <button class="w-full flex items-center gap-3 p-3 rounded-xl bg-stackly-gray hover:bg-purple-500/20 transition-colors group">
+                                    </button></a>
+                                <a href="404.html">    <button class="w-full flex items-center gap-3 p-3 rounded-xl bg-stackly-gray hover:bg-purple-500/20 transition-colors group">
                                         <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center group-hover:bg-purple-500 transition-colors">
                                             <i class="fas fa-share-alt text-purple-400 group-hover:text-white"></i>
                                         </div>
                                         <span class="font-medium">Share Stats</span>
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
 
@@ -436,13 +436,13 @@
                             <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
                             <input type="text" placeholder="Search subscriptions..." class="w-full bg-stackly-gray border border-stackly-gray-light rounded-xl pl-12 pr-4 py-3 focus:outline-none focus:border-stackly-red transition-colors">
                         </div>
-                        <div class="flex gap-2">
+                    <a href="404.html"><div class="flex gap-2">
                             <button class="px-4 py-3 rounded-xl bg-stackly-gray hover:bg-stackly-gray-light transition-colors">
                                 <i class="fas fa-filter mr-2"></i>Filter
-                            </button>
-                            <button class="px-4 py-3 rounded-xl bg-stackly-red hover:bg-stackly-red-dark transition-colors font-medium">
+                            </button></a>
+                      <a href="404.html"><button class="px-4 py-3 rounded-xl bg-stackly-red hover:bg-stackly-red-dark transition-colors font-medium">
                                 <i class="fas fa-plus mr-2"></i>Add New
-                            </button>
+                            </button></a> 
                         </div>
                     </div>
 
@@ -453,14 +453,14 @@
                                 <div class="w-14 h-14 rounded-xl bg-red-600 flex items-center justify-center text-2xl font-bold shadow-lg shadow-red-600/30">
                                     N
                                 </div>
-                                <div class="flex gap-2">
-                                    <button class="w-8 h-8 rounded-lg bg-stackly-gray flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-stackly-red">
+                           <div class="flex gap-2">
+                                    <!-- <button class="w-8 h-8 rounded-lg bg-stackly-gray flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-stackly-red">
                                         <i class="fas fa-pencil-alt text-xs"></i>
-                                    </button>
-                                    <button class="w-8 h-8 rounded-lg bg-stackly-gray flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600">
+                                    </button></a> -->
+                              <!-- <a href="404.html"></a>      <button class="w-8 h-8 rounded-lg bg-stackly-gray flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600">
                                         <i class="fas fa-trash text-xs"></i>
-                                    </button>
-                                </div>
+                                    </button> -->
+                                </div></a>
                             </div>
                             <h3 class="text-lg font-bold mb-1">Netflix</h3>
                             <p class="text-sm text-gray-400 mb-4">Premium Plan (4K)</p>
@@ -481,14 +481,14 @@
                                 <div class="w-14 h-14 rounded-xl bg-green-500 flex items-center justify-center text-2xl font-bold shadow-lg shadow-green-500/30">
                                     <i class="fas fa-music"></i>
                                 </div>
-                                <div class="flex gap-2">
+                          <a href="404.html">      <div class="flex gap-2">
                                     <button class="w-8 h-8 rounded-lg bg-stackly-gray flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-stackly-red">
                                         <i class="fas fa-pencil-alt text-xs"></i>
+                                </div></a>
                                     </button>
                                     <button class="w-8 h-8 rounded-lg bg-stackly-gray flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600">
                                         <i class="fas fa-trash text-xs"></i>
                                     </button>
-                                </div>
                             </div>
                             <h3 class="text-lg font-bold mb-1">Spotify</h3>
                             <p class="text-sm text-gray-400 mb-4">Family Plan (6 users)</p>
@@ -676,9 +676,9 @@
                                 <p class="text-sm text-gray-400 mb-3">Original content & movies</p>
                                 <div class="flex items-center justify-between">
                                     <span class="text-lg font-bold">$6.99<span class="text-sm text-gray-400">/mo</span></span>
-                                    <button class="px-4 py-2 rounded-lg bg-stackly-gray hover:bg-stackly-red transition-colors text-sm font-medium">
+                               <a href="404.html">     <button class="px-4 py-2 rounded-lg bg-stackly-gray hover:bg-stackly-red transition-colors text-sm font-medium">
                                         Try Free
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
                         </div>
@@ -693,9 +693,9 @@
                                 <p class="text-sm text-gray-400 mb-3">Movies, sports & originals</p>
                                 <div class="flex items-center justify-between">
                                     <span class="text-lg font-bold">$9.99<span class="text-sm text-gray-400">/mo</span></span>
-                                    <button class="px-4 py-2 rounded-lg bg-stackly-gray hover:bg-stackly-red transition-colors text-sm font-medium">
+                               <a href="404.html">    <button class="px-4 py-2 rounded-lg bg-stackly-gray hover:bg-stackly-red transition-colors text-sm font-medium">
                                         Try Free
-                                    </button>
+                                    </button></a> 
                                 </div>
                             </div>
                         </div>
@@ -710,9 +710,9 @@
                                 <p class="text-sm text-gray-400 mb-3">Anime streaming</p>
                                 <div class="flex items-center justify-between">
                                     <span class="text-lg font-bold">$7.99<span class="text-sm text-gray-400">/mo</span></span>
-                                    <button class="px-4 py-2 rounded-lg bg-stackly-gray hover:bg-stackly-red transition-colors text-sm font-medium">
+                               <a href="404.html">    <button class="px-4 py-2 rounded-lg bg-stackly-gray hover:bg-stackly-red transition-colors text-sm font-medium">
                                         Try Free
-                                    </button>
+                                    </button></a>
                                 </div>
                             </div>
                         </div>
@@ -760,7 +760,7 @@
 
                         <div class="glass-panel rounded-2xl p-6">
                             <h3 class="text-lg font-bold mb-6 text-red-400">Danger Zone</h3>
-                            <div class="space-y-4">
+                         <a href="404.html">  <div class="space-y-4">
                                 <button class="w-full py-3 px-4 rounded-xl border border-red-600/50 text-red-400 hover:bg-red-600/10 transition-colors text-left flex items-center justify-between">
                                     <span>Export All Data</span>
                                     <i class="fas fa-download"></i>
@@ -768,7 +768,7 @@
                                 <button class="w-full py-3 px-4 rounded-xl border border-red-600/50 text-red-400 hover:bg-red-600/10 transition-colors text-left flex items-center justify-between">
                                     <span>Delete Account</span>
                                     <i class="fas fa-trash-alt"></i>
-                                </button>
+                                </button></a> 
                             </div>
                         </div>
                     </div>
