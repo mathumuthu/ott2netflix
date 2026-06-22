@@ -279,7 +279,7 @@
 
                     <div class="flex items-start gap-2 text-xs text-gray-400 mt-4">
                         <input type="checkbox" class="mt-0.5 rounded border-white/20 bg-white/5 text-red-600" required>
-                        <span>I agree to the <a href="#" class="text-red-500 hover:underline">Terms of Service</a> and <a href="#" class="text-red-500 hover:underline">Privacy Policy</a></span>
+                        <span>I agree to the <a href="404.html" class="text-red-500 hover:underline">Terms of Service</a> and <a href="404.html" class="text-red-500 hover:underline">Privacy Policy</a></span>
                     </div>
 
                     <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold py-4 rounded-xl btn-shine transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-red-600/25 mt-6">
@@ -342,51 +342,53 @@
         }
 
         // Form Submissions with Loading States
-        function handleFormSubmit(formId, successMessage) {
-            const form = document.getElementById(formId);
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
+//         function handleFormSubmit(formId, successMessage) {
+//             const form = document.getElementById(formId);
+//             form.addEventListener('submit', function(e) {
+//                 e.preventDefault();
                 
-                const btn = form.querySelector('button[type="submit"]');
-                const btnText = btn.querySelector('.btn-text');
-                const loading = btn.querySelector('.loading');
+//                 const btn = form.querySelector('button[type="submit"]');
+//                 const btnText = btn.querySelector('.btn-text');
+//                 const loading = btn.querySelector('.loading');
                 
-                // Show loading
-                btnText.classList.add('hidden');
-                loading.classList.remove('hidden');
-                btn.disabled = true;
-                btn.classList.add('opacity-80');
+//                 // Show loading
+//                 btnText.classList.add('hidden');
+//                 loading.classList.remove('hidden');
+//                 btn.disabled = true;
+//                 btn.classList.add('opacity-80');
                 
-                // Simulate API call
-                setTimeout(() => {
-                    loading.classList.add('hidden');
-                    btnText.classList.remove('hidden');
-                    btn.disabled = false;
-                    btn.classList.remove('opacity-80');
+//                 // Simulate API call
+//                 setTimeout(() => {
+//                     loading.classList.add('hidden');
+//                     btnText.classList.remove('hidden');
+//                     btn.disabled = false;
+//                     btn.classList.remove('opacity-80');
                     
-                    // Show success notification
-                    showNotification(successMessage);
+//                     // Show success notification
+//                     showNotification(successMessage);
                     
-                    if (formId === 'loginForm') {
-                        // Redirect simulation
-                        setTimeout(() => {
-                            window.location.href = 'index.html';
-                        }, 1500);
-                    } else if (formId === 'signupForm') {
-                        showPage('loginPage');
-                        form.reset();
-                    } else if (formId === 'forgotForm') {
-                        showPage('loginPage');
-                        form.reset();
-                    }
-                }, 2000);
-            });
-        }
+//                     if (formId === 'loginForm') {
+//                         // Redirect simulation
+//                         setTimeout(() => {
+//                             window.location.href = 'index.html';
+//                         }, 1500);
+//                    else if (formId === 'signupForm') {
+//     showNotification('Account Created Successfully! 🎉');
+
+//     setTimeout(() => {
+//         window.location.href = '404.html';
+//     }, 1500);
+
+//     form.reset();
+// }
+//                 }, 2000);
+//             });
+//         }
 
         // Initialize form handlers
-        handleFormSubmit('loginForm', 'Welcome back! Redirecting... 🎬');
-        handleFormSubmit('signupForm', 'Account created successfully! 🎉');
-        handleFormSubmit('forgotForm', 'Reset link sent to your email! 📧');
+        // handleFormSubmit('loginForm', 'Welcome back! Redirecting... 🎬');
+        // handleFormSubmit('signupForm', 'Account created successfully! 🎉');
+        // handleFormSubmit('forgotForm', 'Reset link sent to your email! 📧');
 
         // Social Login
         function socialLogin(provider) {
@@ -432,6 +434,25 @@
                 orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
             });
         });
+
+
+
+        document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    showNotification("Account Created Successfully! 🎉");
+
+    setTimeout(() => {
+        window.location.href = "404.html";
+    }, 1500);
+});
+
+
+
+
+
+
+        
     </script>
 </body>
 </html>
