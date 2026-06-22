@@ -173,6 +173,13 @@
             transform: translateY(-3px);
             background: rgba(255, 255, 255, 0.1);
         }
+
+
+
+
+
+
+        
     </style>
 </head>
 <body class="gradient-bg min-h-screen flex items-center justify-center p-4 relative">
@@ -207,98 +214,21 @@
             <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
 
             <!-- LOGIN PAGE -->
-            <div id="loginPage" class="page-transition active-page">
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl font-bold text-white mb-2">Welcome Back</h2>
-                    <p class="text-gray-400 text-sm">Sign in to continue watching</p>
-                </div>
-
-                <form id="loginForm" class="space-y-5">
-                    <!-- Email Input -->
-                    <div class="input-wrapper relative">
-                        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 input-icon z-10">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <input type="email" 
-                               id="loginEmail" 
-                               class="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none input-glow transition-all duration-300"
-                               placeholder="Email or phone number" required>
-                    </div>
-
-                    <!-- Password Input -->
-                    <div class="input-wrapper relative">
-                        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 input-icon z-10">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <input type="password" 
-                               id="loginPassword" 
-                               class="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-12 text-white placeholder-gray-500 focus:outline-none input-glow transition-all duration-300"
-                               placeholder="Password" required>
-                        <button type="button" onclick="togglePassword('loginPassword', this)" 
-                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-
-                    <!-- Remember & Forgot -->
-                    <div class="flex items-center justify-between text-sm">
-                        <label class="flex items-center gap-2 text-gray-400 cursor-pointer hover:text-white transition-colors">
-                            <input type="checkbox" class="w-4 h-4 rounded border-white/20 bg-white/5 text-red-600 focus:ring-red-600 focus:ring-offset-0">
-                            <span>Remember me</span>
-                        </label>
-                        <button type="button" onclick="showPage('forgotPage')" 
-                                class="text-red-500 hover:text-red-400 font-medium transition-colors">
-                            Forgot password?
-                        </button>
-                    </div>
-
-                    <!-- Sign In Button -->
-                    <button type="submit" id="loginBtn"
-                            class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold py-4 rounded-xl btn-shine transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-red-600/25">
-                        <span class="btn-text flex items-center justify-center gap-2">
-                            Sign In <i class="fas fa-arrow-right text-sm"></i>
-                        </span>
-                        <div class="loading hidden w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto"></div>
-                    </button>
-                </form>
-
-                <!-- Divider -->
-                <div class="relative my-8">
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="w-full border-t border-white/10"></div>
-                    </div>
-                    <div class="relative flex justify-center text-sm">
-                        <span class="px-4 bg-[#141414] text-gray-500 rounded-full">Or continue with</span>
-                    </div>
-                </div>
-
-                <!-- Social Login -->
-                <div class="grid grid-cols-3 gap-3">
-                    <button onclick="socialLogin('google')" class="social-btn bg-white/5 border border-white/10 rounded-xl py-3 text-white hover:border-white/30">
-                        <i class="fab fa-google text-lg"></i>
-                    </button>
-                    <button onclick="socialLogin('facebook')" class="social-btn bg-white/5 border border-white/10 rounded-xl py-3 text-white hover:border-white/30">
-                        <i class="fab fa-facebook-f text-lg"></i>
-                    </button>
-                    <button onclick="socialLogin('apple')" class="social-btn bg-white/5 border border-white/10 rounded-xl py-3 text-white hover:border-white/30">
-                        <i class="fab fa-apple text-lg"></i>
-                    </button>
-                </div>
 
                 <!-- Sign Up Link -->
-                <p class="text-center mt-8 text-gray-400 text-sm">
+                <!-- <p class="text-center mt-8 text-gray-400 text-sm">
                     Don't have an account? 
                     <button onclick="showPage('signupPage')" class="text-red-500 hover:text-red-400 font-semibold ml-1 transition-colors">
                         Sign up now
                     </button>
                 </p>
-            </div>
+            </div> -->
 
-            <!-- SIGN UP PAGE -->
-            <div id="signupPage" class="page-transition hidden-page">
-                <button onclick="showPage('loginPage')" class="mb-6 text-gray-400 hover:text-white flex items-center gap-2 transition-colors text-sm">
-                    <i class="fas fa-arrow-left"></i> Back to login
-                </button>
+            <!-- SIGN UP PAGE --><a href="login.html"
+   class="mb-6 text-white hover:text-red-400 flex items-center gap-2 transition-colors text-sm font-medium">
+    <i class="fas fa-arrow-left"></i>
+    Back to login
+</a>
 
                 <div class="text-center mb-6">
                     <h2 class="text-2xl font-bold text-white mb-2">Create Account</h2>
@@ -312,7 +242,7 @@
                         </div>
                         <input type="text" 
                                class="w-full bg-white/5 border border-white/10 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none input-glow transition-all"
-                               placeholder="Full name" required>
+                               placeholder="Full name & phone number" required>
                     </div>
 
                     <div class="input-wrapper relative">
@@ -358,59 +288,21 @@
                     </button>
                 </form>
 
-                <p class="text-center mt-6 text-gray-400 text-sm">
+                <!-- <p class="text-center mt-6 text-gray-400 text-sm">
                     Already have an account? 
                     <button onclick="showPage('loginPage')" class="text-red-500 hover:text-red-400 font-semibold ml-1 transition-colors">
                         Sign in
                     </button>
-                </p>
+                </p> -->
             </div>
 
-            <!-- FORGOT PASSWORD PAGE -->
-            <div id="forgotPage" class="page-transition hidden-page">
-             <a href="login.html">  <button onclick="showPage('loginPage')" class="mb-6 text-gray-400 hover:text-white flex items-center gap-2 transition-colors text-sm">
-                    <i class="fas fa-arrow-left"></i> Back to login
-                </button></a> 
-
-                <div class="text-center mb-6">
-                    <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-key text-2xl text-red-500"></i>
-                    </div>
-                    <h2 class="text-2xl font-bold text-white mb-2">Reset Password</h2>
-                    <p class="text-gray-400 text-sm">Enter your email to receive reset instructions</p>
-                </div>
-
-                <form id="forgotForm" class="space-y-5">
-                    <div class="input-wrapper relative">
-                        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 input-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <input type="email" 
-                               class="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder-gray-500 focus:outline-none input-glow transition-all"
-                               placeholder="Enter your email" required>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-semibold py-4 rounded-xl btn-shine transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-red-600/25">
-                        <span class="btn-text">Send Reset Link</span>
-                        <div class="loading hidden w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto"></div>
-                    </button>
-                </form>
-
-                <div class="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
-                    <p class="text-xs text-gray-400 text-center">
-                        <i class="fas fa-info-circle mr-1"></i>
-                        Check your spam folder if you don't see the email in your inbox.
-                    </p>
-                </div>
-            </div>
-
-        </div>
+            
 
         <!-- Footer Links -->
         <div class="mt-8 flex justify-center gap-6 text-xs text-gray-500">
-            <a href="#" class="hover:text-white transition-colors">Help Center</a>
-            <a href="#" class="hover:text-white transition-colors">Privacy</a>
-            <a href="#" class="hover:text-white transition-colors">Terms</a>
+            <a href="404.html" class="hover:text-white transition-colors">Help Center</a>
+            <a href="404.html" class="hover:text-white transition-colors">Privacy</a>
+            <a href="404.html" class="hover:text-white transition-colors">Terms</a>
         </div>
     </div>
 
